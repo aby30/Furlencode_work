@@ -40,6 +40,13 @@
    <div class="contentNfooter">
     <div class="container main_cont">
       <div id="view0">
+		<div class="row clearfix">
+			<div class="col-xs-12">
+			  <div class="owl">
+				<span class="owl_img"><img src="logoo.png" alt=".." style="width:100%"></span>
+			  </div>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-xs-12">
 			  <div class="logo"></div>
@@ -49,17 +56,11 @@
 			<div class="col-xs-12">
 			  <div id="loading" class="giff">
 				<p><span class="gif_img"><img src="fetch.gif" alt=".." style="width: 8%;"></span></p>
-				<p> <span class="fetch_write">Fetching your location</span></p>
+				<p><center> <span class="fetch_write">Fetching your location</span><center></p>
 			  </div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-12">
-			  <div class="owl">
-				<span class="owl_img"><img src="logoo.png" alt=".." style="width:100%"></span>
-			  </div>
-			</div>
-		</div>
+		
       </div>
       <div id="view1" class="row">
         <div class="col-xs-12">
@@ -147,7 +148,7 @@
       </div>
 	</div>
     
- <script>
+	 <script>
       $(window).load(function() {
           $('#loading').fadeOut(2000);
           $('html,body').animate(
@@ -161,44 +162,44 @@
     <script>
         $(document).ready(function(){
         $('[data-toggle="popover"]').popover();
-    });
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaGYr9R7DQlYuaG1PHE2pE-NDjnxdB3pU&signed_in=true&callback=initMap">
+		});
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaGYr9R7DQlYuaG1PHE2pE-NDjnxdB3pU&signed_in=true&callback=initMap">
     </script>
 	<script>
-var h = window.innerHeight;
-document.getElementById("view0").style.height = h + "px";
-document.getElementById("view1").style.height = h + "px";
-document.getElementById("view2").style.height = h + "px";
-//document.getElementById("view3").style.height = (h/4) + "px";
-document.getElementById("map-canvas").style.height = h + "px";
+		var h = window.innerHeight;
+		document.getElementById("view0").style.height = h + "px";
+		document.getElementById("view1").style.height = h + "px";
+		document.getElementById("view2").style.height = (h/2) + "px";
+		document.getElementById("view3").style.height = (h/4) + "px";
+		document.getElementById("map-canvas").style.height = h + "px";
 
-//document.getElementById("view_big").style.height = (h/4) + "px";
+		//document.getElementById("view_big").style.height = (h/4) + "px";
 
 
     </script>
 	<script>
-$("#view0").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#view0").offset().top
-    }, 2000);
-});
+		$("#view0").click(function() {
+			$('html, body').animate({
+				scrollTop: $("#view0").offset().top
+			}, 2000);
+		});
     </script>
 	<script>
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 500);
-        return false;
-      }
-    }
-  });
-});
+		$(function() {
+		  $('a[href*="#"]:not([href="#"])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 500);
+				return false;
+			  }
+			}
+		  });
+		});
     </script>
 	
 	
