@@ -12,6 +12,14 @@
   display: inline-block;
   width: 30%;
 }
+.navbar-inverse .navbar-brand {
+    color: #E0DBDB;
+    font-weight: 600;
+}
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    border-bottom: 4px solid turquoise;
+}
+
 
 #view0 {
   position: relative;
@@ -214,5 +222,11 @@ footer {
     
     margin-top: 25%;
 }
-
+#view3 {
+    left: -15%;
+    width: 135%;
+}
+.stalls {
+	visibility:hidden;
+}
 }
