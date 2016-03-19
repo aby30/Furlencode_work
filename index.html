@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="animate.css">
     <script src="jquery-2.1.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
     
     <script src="MapScript.js"></script>
     
@@ -78,7 +80,7 @@
           </div>
 		  <div class="col-md-6">
 			<div class="media" style="padding-left: 0%;">
-              <div class="media-body">
+              <div class="media-body"> 
                 <h3 class="media-heading">Store name</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
               </div>
@@ -185,13 +187,17 @@
 
 
     </script>
-	<script>
-		$("#view0").click(function() {
-			$('html, body').animate({
-				scrollTop: $("#view0").offset().top
-			}, 2000);
-		});
-    </script>
+	<script type="text/javascript">
+		$(function() {
+			   $('#view2').waypoint(function() {
+				 $('.img-circle').addClass('animated slideInLeft');
+				 $('.media-body').addClass('animated slideInRight');
+				 }, {
+				   offset: '100%'
+				 });
+			});
+	</script>
+	
 	<script>
 		$(function() {
 		  $('a[href*="#"]:not([href="#"])').click(function() {
